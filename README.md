@@ -15,7 +15,7 @@ curl -fsSL https://raw.githubusercontent.com/howtoedittv/wildberries-extras/refs
 ### Clone the repository:
 ```sh
 git clone --depth 1 https://github.com/howtoedittv/wildberries-extras
-cd wildberries-extras
+check folders for insturctions
 ```
 
 
