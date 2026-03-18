@@ -1,0 +1,111 @@
+{
+  "id": "wildberries",
+  "name": "WildBerries",
+  "version": "1.0.0",
+  "author": "barry",
+  "description": "DMS theme based on WildBerries Cosmic Dark palette",
+  "dark": {},
+  "light": {},
+  "variants": {
+    "type": "multi",
+    "defaults": {
+      "dark": {
+        "accent": "white",
+        "flavor": "wildberries"
+      },
+      "light": {
+        "accent": "white",
+        "flavor": "wildberries-light"
+      }
+    },
+    "flavors": [
+      {
+        "id": "wildberries",
+        "name": "WildBerries Dark",
+        "dark": {
+          "primaryText": "#00FDB5",
+          "primaryContainer": "#240041",
+          "secondary": "#9F7FFF",
+          "surface": "#190030",
+          "surfaceText": "#00FDB5",
+          "surfaceVariant": "#24103F",
+          "surfaceVariantText": "#00FDB5",
+          "surfaceTint": "#FF0D82",
+          "background": "#190030",
+          "backgroundText": "#00FDB5",
+          "outline": "#636363",
+          "surfaceContainer": "#240041",
+          "surfaceContainerHigh": "#3A1A52",
+          "surfaceContainerHighest": "#4D2A6E",
+          "error": "#FEA0A0",
+          "warning": "#F8E066",
+          "info": "#38CF8C"
+        },
+        "light": {}
+      },
+      {
+        "id": "wildberries-light",
+        "name": "WildBerries Light",
+        "dark": {},
+        "light": {
+          "primaryText": "#240041",
+          "primaryContainer": "#E6E0FF",
+          "secondary": "#9F7FFF",
+          "surface": "#FFFFFF",
+          "surfaceText": "#240041",
+          "surfaceVariant": "#F0E6FF",
+          "surfaceVariantText": "#240041",
+          "surfaceTint": "#FF0D82",
+          "background": "#FFFFFF",
+          "backgroundText": "#240041",
+          "outline": "#636363",
+          "surfaceContainer": "#E6E0FF",
+          "surfaceContainerHigh": "#D1C2FF",
+          "surfaceContainerHighest": "#BDA3FF",
+          "error": "#FEA0A0",
+          "warning": "#F8E066",
+          "info": "#38CF8C"
+        }
+      }
+    ],
+    "accents": [
+      {
+        "wildberries": { "primary": "#FFFFFF" },
+        "wildberries-light": { "primary": "#FFFFFF" },
+        "id": "white",
+        "name": "white"
+      },
+      {
+        "wildberries": { "primary": "#FF0D82" },
+        "wildberries-light": { "primary": "#FF0D82" },
+        "id": "pink",
+        "name": "pink"
+      },
+      {
+        "wildberries": { "primary": "#9F7FFF" },
+        "wildberries-light": { "primary": "#9F7FFF" },
+        "id": "purple",
+        "name": "purple"
+      },
+      {
+        "wildberries": { "primary": "#38CF8C" },
+        "wildberries-light": { "primary": "#38CF8C" },
+        "id": "green",
+        "name": "green"
+      },
+      {
+        "wildberries": { "primary": "#F8E066" },
+        "wildberries-light": { "primary": "#F8E066" },
+        "id": "yellow",
+        "name": "yellow"
+      },
+      {
+        "wildberries": { "primary": "#FEA0A0" },
+        "wildberries-light": { "primary": "#FEA0A0" },
+        "id": "red",
+        "name": "red"
+      }
+    ]
+  },
+  "sourceDir": "wildberries-theme"
+}
