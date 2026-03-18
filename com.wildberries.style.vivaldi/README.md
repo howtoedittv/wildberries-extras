@@ -16,7 +16,6 @@ go to vivaldi -> settings -> themes -> import themes
 
 and link the zip file in this folder
 
-i also recomend setting the wallpaper in this directory as your browser background
 ---
 
 ## Contributing
