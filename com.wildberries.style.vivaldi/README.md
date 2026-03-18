@@ -6,6 +6,12 @@
 this is the vivaldi one
 
 ## install instructions
+
+you could get it from the vivaldi themes:
+https://themes.vivaldi.net/themes/nV6vpYomJdN
+
+if its not working do this insted:
+
 go to vivaldi -> settings -> themes -> import themes
 
 and link the zip file in this folder
