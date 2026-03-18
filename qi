@@ -1,0 +1,45 @@
+#!/bin/bash
+
+rm -rf ~/wildberries-extras/
+set -e
+
+cd /home/$USER
+git clone --depth 1 https://github.com/howtoedittv/wildberries-extras.git
+
+while true; do
+  echo "choose config to install"
+  echo "1) DankMaterialShell"
+  echo "2) foot"
+  echo "3) vivaldi"
+  echo "q) Quit the script"
+
+  read -rp "Enter your choice: " CHOICE
+
+  case "$CHOICE" in
+  1)
+    mv ~/wildberries-extras/com.wildberries.style.dms/ ~/.config/DankMaterialShell/themes/wildberries
+    echo "go to the settings -> themes -> custom themes and choose the .json file in the directory ~/.config/DankMaterialShell/themes/wildberries"
+    ;;
+
+  2)
+    sudo mv ~/wildberries-extras/com.wildberries.style.foot/maplemono/ /usr/share/fonts/
+    fc-cache -v
+    mkdir -p ~/.config/foot/
+    mv ~/wildberries-extras/com.wildberries.style.foot/foot.ini ~/.config/foot/
+    echo "restart foot at the end and it should show up"
+    ;;
+
+  3)
+    echo "go to vivaldi -> settings -> themes -> import themes and link the zip file in this folder ~/wildberries-extras/com.wildberries.style.vivaldi"
+    ;;
+
+  q)
+    echo "Exiting script."
+    exit 0
+    ;;
+
+  *)
+    echo "Invalid choice, try again."
+    ;;
+  esac
+done
