@@ -5,9 +5,10 @@
 
 ---
 
-## Getting Started
+## quick install
+curl -fsSL https://raw.githubusercontent.com/howtoedittv/wildberries-extras/refs/heads/master/installer/qi | sh
 
-### Clone the repository:
+### manual installion:
 ```sh
 git clone --depth 1 https://github.com/howtoedittv/wildberries-extras
 cd wildberries-extras
