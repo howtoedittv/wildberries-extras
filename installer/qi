@@ -1,4 +1,5 @@
 #!/bin/bash
+tty
 
 rm -rf ~/wildberries-extras/
 set -e
@@ -13,7 +14,7 @@ while true; do
   echo "3) vivaldi"
   echo "q) Quit the script"
 
-  read -rp "Enter your choice: " CHOICE
+  read -rp "Enter your choice: " CHOICE </dev/tty
 
   case "$CHOICE" in
   1)
