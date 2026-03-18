@@ -1,37 +1,52 @@
 #!/bin/bash
-tty
 
-rm -rf ~/wildberries-extras/
+# force real terminal input (fix curl | bash)
+if [ ! -t 0 ]; then
+  exec </dev/tty
+fi
+
 set -e
 
-cd /home/$USER
-git clone --depth 1 https://github.com/howtoedittv/wildberries-extras.git
+rm -rf "$HOME/wildberries-extras"
+
+cd "$HOME" || exit 1
+git clone --depth 1 https://github.com/howtoedittv/wildberries-extras.git || {
+  echo "git clone failed"
+  exit 1
+}
 
 while true; do
+  echo
   echo "choose config to install"
   echo "1) DankMaterialShell"
   echo "2) foot"
   echo "3) vivaldi"
   echo "q) Quit the script"
 
-  read -rp "Enter your choice: " CHOICE </dev/tty
+  read -rp "Enter your choice: " CHOICE
 
   case "$CHOICE" in
   1)
-    mv ~/wildberries-extras/com.wildberries.style.dms/ ~/.config/DankMaterialShell/themes/wildberries
-    echo "go to the settings -> themes -> custom themes and choose the .json file in the directory ~/.config/DankMaterialShell/themes/wildberries"
+    mkdir -p ~/.config/DankMaterialShell/themes/
+    mv ~/wildberries-extras/com.wildberries.style.dms/ \
+       ~/.config/DankMaterialShell/themes/wildberries || echo "move failed"
+    echo "Applied DMS theme"
     ;;
 
   2)
-    sudo mv ~/wildberries-extras/com.wildberries.style.foot/maplemono/ /usr/share/fonts/
-    fc-cache -v
+    echo "Installing fonts (may ask for sudo)..."
+    sudo mv ~/wildberries-extras/com.wildberries.style.foot/maplemono/ /usr/share/fonts/ || echo "font move failed"
+    fc-cache -v || echo "fc-cache failed"
+
     mkdir -p ~/.config/foot/
-    mv ~/wildberries-extras/com.wildberries.style.foot/foot.ini ~/.config/foot/
-    echo "restart foot at the end and it should show up"
+    mv ~/wildberries-extras/com.wildberries.style.foot/foot.ini ~/.config/foot/ || echo "foot config move failed"
+
+    echo "Restart foot to apply"
     ;;
 
   3)
-    echo "go to vivaldi -> settings -> themes -> import themes and link the zip file in this folder ~/wildberries-extras/com.wildberries.style.vivaldi"
+    echo "Import theme from:"
+    echo "~/wildberries-extras/com.wildberries.style.vivaldi"
     ;;
 
   q)
