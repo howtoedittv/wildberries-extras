@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# force real terminal input (fix curl | bash)
+
 if [ ! -t 0 ]; then
   exec </dev/tty
 fi
