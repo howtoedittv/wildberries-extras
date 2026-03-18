@@ -18,7 +18,7 @@ cd wildberries-extras
 
 - Dms config
 - foot config
-- go inside of the config folders for instructions on how to install the configs
+- vivaldi config
 
 ## Contributing
 
