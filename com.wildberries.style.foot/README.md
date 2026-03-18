@@ -6,6 +6,7 @@
 this is the foot one
 
 ## install instructions
+i recomend installig the maple mono font
 
 sudo mv ~/wildberries-extras/com.wildberries.style.foot/maplemono/ /usr/share/fonts/
 
