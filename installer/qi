@@ -30,7 +30,7 @@ while true; do
     mkdir -p ~/.config/DankMaterialShell/themes/
     mv ~/wildberries-extras/com.wildberries.style.dms/ \
        ~/.config/DankMaterialShell/themes/wildberries || echo "move failed"
-    echo "Applied DMS theme"
+    echo "moved to ~/.config/DankMaterialShell/themes/wildberries. please open settings in dms go to themes and apply the json  file in the mentiond directory"
     ;;
 
   2)
